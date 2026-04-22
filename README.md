@@ -1,4 +1,4 @@
-### Azure Multi-modal Compliance Ingestion Engine using LangGraph
+# Azure Multi-modal Compliance Ingestion Engine using LangGraph
 ## Overview
 The Azure Multi-modal Compliance Ingestion Engine is an end-to-end, AI-powered compliance and audit intelligence system built using LangGraph orchestration, RAG pipelines, and Azure AI services.
 It is designed to ingest, process, and analyze multi-modal data (video, audio, and text) to generate structured compliance insights, enable intelligent retrieval, and support audit workflows with full observability.
@@ -14,7 +14,7 @@ External Intelligence & Observability Layer
 
 ## System Components
 
-# 1. Entry Points
+### 1. Entry Points
 The system supports multiple ingestion triggers:
 main.py (CLI Trigger)
 Used for manual execution and batch processing of audit workflows.
@@ -22,7 +22,7 @@ FastAPI Backend Server
 Exposes REST APIs for real-time ingestion and query handling.
 These entry points standardize input before passing it into the orchestration layer.
 
-# 2. Orchestration Layer (LangGraph)
+### 2. Orchestration Layer (LangGraph)
 This is the core intelligence layer responsible for workflow execution and decision-making.
 Key Modules:
 RAG Workflow (LangGraph)
@@ -38,7 +38,7 @@ Compliance Auditor
 Applies compliance rules and validation logic.
 Generates structured audit findings and insights.
 
-# 3. Azure Infrastructure & Managed Services
+### 3. Azure Infrastructure & Managed Services
 This layer handles storage, indexing, and AI-powered processing.
 Azure Blob Storage
 Stores temporary video files and raw media inputs.
@@ -49,7 +49,7 @@ Azure AI Search (Vector DB)
 Stores embeddings for semantic retrieval.
 Powers RAG-based similarity search.
 
-# 4. External Intelligence & Observability
+### 4. External Intelligence & Observability
 This layer enhances model intelligence and system monitoring.
 Azure OpenAI (LLM + Embeddings)
 Powers reasoning, summarization, and embedding generation.
@@ -63,15 +63,15 @@ Data Flow Overview
 User triggers ingestion via CLI or FastAPI.
 Video/content is processed using yt-dlp and sent to Azure Blob Storage.
 
-## Azure Video Indexer extracts:
+### Azure Video Indexer extracts:
 OCR text
 Speech transcripts
 Scene-level insights
 
-## Embeddings are generated using Azure OpenAI.
+### Embeddings are generated using Azure OpenAI.
 Data is stored in Azure AI Search (Vector DB).
 
-## LangGraph orchestrates:
+### LangGraph orchestrates:
 Retrieval
 RAG-based reasoning
 Compliance analysis
